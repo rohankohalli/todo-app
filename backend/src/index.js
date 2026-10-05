@@ -3,7 +3,7 @@ import cors from 'cors'
 import todoRoutes from './routes/todoRoutes.js'
 
 export const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8000
 
 function errorMiddleware(err, req, res, next) {
     console.error("Unhandled Error:", err);
