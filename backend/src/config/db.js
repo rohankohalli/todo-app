@@ -4,7 +4,7 @@ export const db = new Database('./data/todos.sqlite')
 
 db.exec(`
   CREATE TABLE IF NOT EXISTS todos (
-    id TEXT PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
     description TEXT,
     status TEXT DEFAULT 'PENDING',
