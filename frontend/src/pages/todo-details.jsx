@@ -81,7 +81,7 @@ export function TodoDetails() {
   return (
     <div>
       <header>
-        <div className="container header-content">
+        <div className="container header-content-2">
           <h1>Todo Details</h1>
           <a href="/index.html" className="btn btn-secondary btn-sm">All Tasks</a>
         </div>

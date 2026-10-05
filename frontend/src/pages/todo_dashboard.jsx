@@ -91,7 +91,7 @@ export function TodoDashboard() {
           <input
             type="text"
             className="form-control"
-            placeholder="🔍 Search tasks..."
+            placeholder="Search tasks..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             style={{ borderRadius: '30px', padding: '0.8rem 1.25rem' }}
