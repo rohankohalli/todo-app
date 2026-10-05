@@ -13,7 +13,6 @@ export function TodoDashboard() {
   const [category, setCategory] = useState('General');
   const [dueDate, setDueDate] = useState('');
 
-  // Filter & Search state
   const [statusFilter, setStatusFilter] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -84,12 +83,10 @@ export function TodoDashboard() {
       <header>
         <div className="container header-content">
           <h1>Todo App</h1>
-          <a href="/index.html" className="btn btn-secondary btn-sm">All Tasks</a>
         </div>
       </header>
 
       <main className="container">
-        {/* 1. Top Search Bar */}
         <div style={{ marginBottom: '1.25rem' }}>
           <input
             type="text"
@@ -101,7 +98,6 @@ export function TodoDashboard() {
           />
         </div>
 
-        {/* 2. Filter Pills & Add Task Action */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
             {['ALL', 'PENDING', 'COMPLETED'].map((st) => (
@@ -125,7 +121,6 @@ export function TodoDashboard() {
           </button>
         </div>
 
-        {/* Collapsible Add Task Form */}
         {showAddModal && (
           <section className="card" style={{ borderLeft: '4px solid #2563eb', marginBottom: '1.5rem' }}>
             <h3 style={{ marginBottom: '1rem' }}>New Task Details</h3>
@@ -183,7 +178,6 @@ export function TodoDashboard() {
           </section>
         )}
 
-        {/* 3. Tasks List */}
         <section>
           {loading && <p style={{ textAlign: 'center', color: '#64748b' }}>Loading tasks...</p>}
           {error && <p style={{ color: 'red' }}>Error: {error}</p>}
@@ -203,7 +197,6 @@ export function TodoDashboard() {
                   style={{ width: '18px', height: '18px', cursor: 'pointer' }}
                 />
                 <div>
-                  {/* MPA Link with query parameter id */}
                   <a href={`/todo.html?id=${todo.id}`} className="todo-title">
                     {todo.title}
                   </a>
