@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { TodoDashboard } from './pages/todo_dashboard.jsx';
+import { TodoDetails } from './pages/todo-details.jsx';
 import './styles/app.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <TodoDashboard />
+  <TodoDetails />
 );
